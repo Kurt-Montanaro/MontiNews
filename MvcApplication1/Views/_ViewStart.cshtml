@@ -1,0 +1,39 @@
+﻿@*@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}*@
+@{
+string CurrentName = Convert.ToString(HttpContext.Current.Request.RequestContext.RouteData.Values["id"]);
+var routeValues = HttpContext.Current.Request.RequestContext.RouteData.Values;
+
+    CurrentName =  HttpContext.Current.Request.FilePath.ToString();
+
+    //dynamic Layout;
+    switch (CurrentName)
+    {
+        case "/Category/National":
+            Layout = "~/Views/Category/_LayoutNational.cshtml";
+            break;
+        case "/Category/Overseas":
+            Layout = "~/Views/Category/_LayoutOverseas.cshtml";
+            break;
+        case "/Category/Sports":
+            Layout = "~/Views/Category/_LayoutSports.cshtml";
+            break;
+        case "/Category/Opinion":
+            Layout = "~/Views/Category/_LayoutOpinion.cshtml";
+            break;
+        case "/Category/Travel":
+            Layout = "~/Views/Category/_LayoutTravel.cshtml";
+            break;
+        case "/Category/Odd":
+            Layout = "~/Views/Category/_LayoutOdd.cshtml";
+            break;
+        case "Index":
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            break;
+        default:
+            //Admin layout
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            break;
+    }  
+}

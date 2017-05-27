@@ -1,0 +1,20 @@
+﻿@model MvcApplication1.Models.ArticleModel
+
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-7 col-md-offset-3">
+            <img src="~/Images/@Model.imagename" />
+            <div><h1>@Model.header</h1></div>
+               <div><h3>@Model.subheader</h3></div>
+               <div><h5>Category :  @Model.category</h5></div>
+               <div><h4>Author : <a href="/author/@Model.username">@Model.username</a></h4></div>
+            <br/>
+            <div id="content"><h5>@Model.content</h5></div>
+        </div>
+    </div>
+</div>

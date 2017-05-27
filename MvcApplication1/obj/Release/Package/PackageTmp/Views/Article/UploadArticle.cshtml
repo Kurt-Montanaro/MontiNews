@@ -1,0 +1,91 @@
+﻿@model MvcApplication1.Models.ArticleModel
+@{
+    ViewBag.Title = "UploadArticle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var name = new BusinessLogic.UsersBL().GetUser(HttpContext.Current.User.Identity.Name).Username;
+}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>UploadArticle</h2>
+
+            @using (Html.BeginForm("UploadArticle", "Article", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true)
+
+                <fieldset>
+                    <legend>User</legend>
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.header)
+                    </div>
+                    <div class="editor-field">
+                        <input type="text" name="header" />
+                    </div>
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.subheader)
+                    </div>
+                    <div class="editor-field">
+                        <input type="text" name="subheader" />
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.category)
+                    </div>
+                    <div class="editor-field">
+                        <select name="category">
+                            <option value="National">National</option>
+                            <option value="Overseas">Overseas</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Opinion">Opinion</option>
+                            <option value="Travel">Travel</option>
+                            <option value="Odd">Odd</option>
+                        </select>
+                    </div>
+                    <br />
+                    <div class="hidden">
+                        @Html.LabelFor(model => model.username)
+                    </div>
+                    <div class="hidden">
+                        <input type="hidden" value="@name" name="username" />
+                    </div>
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.imageUpload)
+                    </div>
+                    <div class="editor-field">
+                        <input type="file" name="imageUpload" />
+                    </div>
+
+
+                    <div class="editor-label">
+                        @Html.LabelFor(model => model.content)
+                    </div>
+                    <div class="editor-field">
+                        <textarea name="content"></textarea>
+
+                    </div>
+                    <div class="hidden">
+                        <input type="hidden" value="@DateTime.Now" name="timestamp" />
+                    </div>
+
+
+
+
+
+                    <p>
+                        <input type="submit" value="Create" />
+                        <br />
+                        @if (ViewBag.Message != null)
+                        {
+                            @ViewBag.Message
+                        }
+                    </p>
+                </fieldset>
+
+            }
+        </div>
+    </div>
+</div>

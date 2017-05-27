@@ -1,0 +1,51 @@
+﻿@model MvcApplication1.Models.ArticleModel
+
+
+@{
+    int i = 0;
+    foreach (var article in ViewBag.ArticlesbyAuthor)
+    {
+        try
+        {
+            if (article.Heading != null)
+            {
+                if (i == 0)
+                {
+                    <div class="item active">
+                        <a href="/article/@article.Heading">
+                            <img src="~/Images/@article.Image" alt="First slide">
+                            <div class="carousel-caption">
+                                <div class="col-md-4 col-md-offset-8">
+                                    <h3>@article.Heading</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+                <div class="item">
+                    <a href="/article/@article.Heading">
+                        <img src="~/Images/@article.Image" alt="Slide @i">
+                        <div class="carousel-caption">
+                            <div class="col-md-4 col-md-offset-8">
+                                <div><h1>@article.Heading</h1></div>
+                                <div><h3>@article.Sub</h3></div>
+                                <div id="content" style="text-overflow: ellipsis;white-space: nowrap;overflow: hidden;"><h5>@article.ArticleContent </h5><h6>...</h6></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="panel-body">
+                    <b>@article.header</b>
+                </div>
+                <img src="~/Images/@article.Image" width="250" height="250" />
+                <div class="panel-heading">
+                    <h4 class="panel-title">More News</h4>
+                </div>
+            }
+        }
+        catch { }
+
+
+        i++;
+    }
+}

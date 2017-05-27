@@ -1,0 +1,13 @@
+﻿@{
+    foreach (var article in ViewBag.Recent)
+    {
+        try
+        {
+            if (article.Heading != null)
+            {
+                <li><a href="#">@article.Heading - @article.Sub</a></li>
+            }
+        }
+        catch { }
+    }
+}

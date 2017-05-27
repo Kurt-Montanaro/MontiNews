@@ -1,0 +1,84 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://bootswatch.com/solar/bootstrap.min.css" rel="stylesheet" />
+        @Scripts.Render("~/bundles/modernizr")
+        <meta charset="utf-8" />
+        <title id="title">@ViewBag.Title - News Monti</title>
+        <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+        <meta name="viewport" content="width=device-width" />
+        <link href="~/Content/Site.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <div class="news red">
+                <span>Breaking News</span>
+                <ul>
+                    @Html.Action("RenderBreaking", "Home", new { name = "Main" })
+                </ul>
+            </div>
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="~/Home/Index"><img style="max-width: 100px; margin-top: -7px;" src="~/Images/logo.png" /></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="~/Home/Index">Home <span class="sr-only">(current)</span></a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categories <span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>@Html.ActionLink("National", "National", "Category")</li>
+                                    <li>@Html.ActionLink("Overseas", "Overseas", "Category")</li>
+                                    <li>@Html.ActionLink("Sports", "Sports", "Category")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Opinion", "Opinion", "Category")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Travel", "Travel", "Category")</li>
+                                    <li class="divider"></li>
+                                    <li>@Html.ActionLink("Odd", "Odd", "Category")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <form class="navbar-form navbar-right" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                        </form>
+                        @Html.Partial("_LoginPartial")
+                        
+                        
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-right">
+                    <p>&copy; @DateTime.Now.Year - News Monti</p>
+                </div>
+            </div>
+        </footer>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </body>
+</html>

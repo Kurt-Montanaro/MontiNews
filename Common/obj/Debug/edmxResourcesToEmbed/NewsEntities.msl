@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MontiNewsModelStoreContainer" CdmEntityContainer="MontiNewsEntities">
+    <EntitySetMapping Name="Articles">
+      <EntityTypeMapping TypeName="MontiNewsModel.Article">
+        <MappingFragment StoreEntitySet="Article">
+          <ScalarProperty Name="Published" ColumnName="Published" />
+          <ScalarProperty Name="ArticleContent" ColumnName="ArticleContent" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+          <ScalarProperty Name="Sub" ColumnName="Sub" />
+          <ScalarProperty Name="Heading" ColumnName="Heading" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Authors">
+      <EntityTypeMapping TypeName="MontiNewsModel.Author">
+        <MappingFragment StoreEntitySet="Author">
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

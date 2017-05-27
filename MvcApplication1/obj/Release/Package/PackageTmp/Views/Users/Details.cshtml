@@ -1,0 +1,59 @@
+﻿@model MvcApplication1.Models.DetailsModel
+
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <h2>Details</h2>
+            <table>
+                <tr><td>Username</td><td><h4>@Model.MyAuthor.Username</h4></td></tr>
+                <tr><td>First Name</td><td><h4>@Model.MyAuthor.Name</h4></td></tr>
+                <tr><td>Surname</td><td><h4>@Model.MyAuthor.Surname</h4></td></tr>
+                <tr><td>Email</td><td><h4>@Model.MyAuthor.Email</h4></td></tr>
+                <tr><td>Description</td><td><h6>@Model.MyAuthor.Description</h6></td></tr>
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    var name = new BusinessLogic.UsersBL().GetUser(HttpContext.Current.User.Identity.Name).Username;
+                    if (name == @Model.MyAuthor.Username)
+                    { 
+                    <tr><td>@Html.ActionLink(name, "Users", "Delete")</td></tr>
+                    }
+                }
+               
+            </table>
+            <img src="~/Images/logo.png" />
+        </div>
+    </div>
+</div>
+
+<div class="col-lg-4-offset-4">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Author Articles</h3>
+        </div>
+        @{
+            int a = 0;
+            foreach (var article in ViewBag.ArticlesbyAuthor)
+            {
+                {
+                    <div class="panel-body" style="float:right;text-overflow: ellipsis;overflow: hidden;">
+                        <h1>@article.Heading</h1>
+                        <h6> @article.ArticleContent </h6>
+                        
+
+                    </div>
+                    <img src="~/Images/@article.Image" width="250" height="250" />
+                        
+                    <div class="panel-heading">
+                    </div>
+
+                }
+
+                a++;
+            }
+        }
+    </div>
+</div>

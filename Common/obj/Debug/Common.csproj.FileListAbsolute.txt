@@ -1,0 +1,10 @@
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\Common.dll.config
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\Common.dll
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\Common.pdb
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\EntityFramework.dll
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\EntityFramework.xml
+C:\Users\El_Monti\Desktop\EP Assignment\Common\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\El_Monti\Desktop\EP Assignment\Common\obj\Debug\Common.csprojResolveAssemblyReference.cache
+C:\Users\El_Monti\Desktop\EP Assignment\Common\obj\Debug\Common.dll
+C:\Users\El_Monti\Desktop\EP Assignment\Common\obj\Debug\Common.pdb

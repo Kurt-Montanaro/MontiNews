@@ -1,0 +1,14 @@
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\BusinessLogic.dll.config
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\BusinessLogic.dll
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\BusinessLogic.pdb
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\Common.dll
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\DataAccess.dll
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\EntityFramework.dll
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\Common.pdb
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\DataAccess.pdb
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\EntityFramework.xml
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\obj\Release\BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\obj\Release\BusinessLogic.dll
+C:\Users\El_Monti\Desktop\EP Assignment\BusinessLogic\obj\Release\BusinessLogic.pdb

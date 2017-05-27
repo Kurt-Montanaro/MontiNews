@@ -1,0 +1,17 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    @if (HttpContext.Current.User.Identity.IsAuthenticated)
+    {
+        var name = new BusinessLogic.UsersBL().GetUser(HttpContext.Current.User.Identity.Name).Username;
+
+        <li><a href="/author/@name">@name</a></li>
+        <li>@Html.ActionLink("Upload Article", "UploadArticle", "Article")</li>
+        <li>@Html.ActionLink("Log Off", "Logout", "Account")</li>
+    }
+    else
+    {
+
+        <li><a href="../Users/Registration"> Register</a></li>
+        <li><a href="../Account/Login">Login</a></li>
+
+    }
+</ul>
