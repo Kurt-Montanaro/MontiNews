@@ -17,7 +17,7 @@ namespace MvcApplication1.Controllers
             
 
             ViewBag.Recent = al.Get5MostRecentArticles();
-            ViewBag.RecentNational = al.Get5MostRecentArticles("(National");
+            ViewBag.RecentNational = al.Get5MostRecentArticles("National");
             ViewBag.RecentOverseas = al.Get5MostRecentArticles("Overseas");
             ViewBag.RecentSports = al.Get5MostRecentArticles("Sports");
             ViewBag.RecentOpinion = al.Get5MostRecentArticles("Opinion");
