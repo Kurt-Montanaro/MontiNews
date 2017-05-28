@@ -64,12 +64,12 @@ namespace MvcApplication1.Controllers
                         string path = Path.Combine(Server.MapPath("~\\Images\\"), image);
                        
                             file.SaveAs(path);
-                            using (MemoryStream mem = new MemoryStream())
-                            {
-                                file.InputStream.CopyTo(mem);
-                                byte[] byteArr = mem.GetBuffer();
-                            }
-                            BlobManager.Instance.UploadBlob(image, file);
+//                             using (MemoryStream mem = new MemoryStream())
+//                             {
+//                                 file.InputStream.CopyTo(mem);
+//                                 byte[] byteArr = mem.GetBuffer();
+//                             }
+//                             BlobManager.Instance.UploadBlob(image, file);
                         Article a = new Article();
                         a.Heading = u.header;
                         a.Sub = u.subheader;
