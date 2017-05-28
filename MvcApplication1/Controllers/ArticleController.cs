@@ -62,19 +62,14 @@ namespace MvcApplication1.Controllers
                         HttpPostedFileBase file = u.imageUpload;
                         string image = file.FileName;
                         string path = Path.Combine(Server.MapPath("~\\Images\\"), image);
-                        //if (!BlobManager.enabled)
-                        //{
+                       
                             file.SaveAs(path);
-                        //    using (MemoryStream mem = new MemoryStream())
-                        //    {
-                        //        file.InputStream.CopyTo(mem);
-                        //        byte[] byteArr = mem.GetBuffer()
-                        //    }
-                        //}
-                        //else
-                        //{
-                        //    BlobManager.Instance.UploadBlob(image,file);
-                        //}
+                            using (MemoryStream mem = new MemoryStream())
+                            {
+                                file.InputStream.CopyTo(mem);
+                                byte[] byteArr = mem.GetBuffer();
+                            }
+                            BlobManager.Instance.UploadBlob(image, file);
                         Article a = new Article();
                         a.Heading = u.header;
                         a.Sub = u.subheader;
