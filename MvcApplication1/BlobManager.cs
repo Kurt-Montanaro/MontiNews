@@ -25,8 +25,8 @@ namespace MvcApplication1
         private CloudBlobContainer GetBlobContainer()
         {
             CloudBlobContainer result = null;
-            const string blobContainerName = "tenantcb";
-            const string storageConnectionString = "StorageConnectionString";
+            const string blobContainerName = "a100362";
+            const string storageConnectionString = "DefaultEndpointsProtocol=https;AccountName=a100362;AccountKey=A3R0gQkbO3cokcUC8C7HGcpacanRALioj4ykJMZiWNI7ZrQ+TsvY+mke0NweNjV+unwNJYluOWAQcnWI10Lisw==;EndpointSuffix=core.windows.net";
             CloudStorageAccount storageAccount = CloudStorageAccount.Parse(storageConnectionString);
             CloudBlobClient blobClient = storageAccount.CreateCloudBlobClient();
             result = blobClient.GetContainerReference(blobContainerName);
